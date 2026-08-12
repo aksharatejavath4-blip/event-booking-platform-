@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Eventify - Discover, explore and book amazing events.">
+
+    <title>Eventify | Event Booking Platform</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header" id="home">
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>Event<span>ify</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#events" class="nav-button">Explore Events</a>
+        </div>
+
+    </nav>
+
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                DISCOVER • EXPERIENCE • CONNECT
+            </span>
+
+            <h1>
+                Make every
+                <span>moment</span>
+                unforgettable.
+            </h1>
+
+            <p>
+                Discover exciting events, concerts, workshops and experiences
+                happening around you. Find your next adventure and book your
+                tickets in just a few clicks.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#events" class="btn primary">
+                    Explore Events
+                    <span>→</span>
+                </a>
+
+                <a href="#categories" class="btn secondary">
+                    Browse Categories
+                </a>
+
+            </div>
+
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>500+</strong>
+                    <span>Events</span>
+                </div>
+
+                <div>
+                    <strong>50K+</strong>
+                    <span>Happy Users</span>
+                </div>
+
+                <div>
+                    <strong>25+</strong>
+                    <span>Categories</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="hero-glow"></div>
+
+            <img
+                src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=85"
+                alt="People enjoying a live event"
+            >
+
+            <div class="floating-event-card">
+
+                <div class="event-date">
+                    <strong>24</strong>
+                    <span>JUN</span>
+                </div>
+
+                <div>
+                    <strong>Summer Music Fest</strong>
+                    <small>Hyderabad • 7:00 PM</small>
+                </div>
+
+                <span class="event-arrow">→</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="search-section">
+
+    <div class="search-box">
+
+        <div class="search-field">
+            <span>🔎</span>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search events, artists or venues..."
+            >
+        </div>
+
+
+        <div class="filter-field">
+
+            <span>📍</span>
+
+            <select id="locationFilter">
+
+                <option value="all">
+                    All Locations
+                </option>
+
+                <option value="hyderabad">
+                    Hyderabad
+                </option>
+
+                <option value="bangalore">
+                    Bangalore
+                </option>
+
+                <option value="mumbai">
+                    Mumbai
+                </option>
+
+                <option value="delhi">
+                    Delhi
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            class="search-button"
+            id="searchButton"
+        >
+            Search Events
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="section" id="events">
+
+    <div class="section-heading">
+
+        <span class="eyebrow">
+            DON'T MISS OUT
+        </span>
+
+        <h2>
+            Upcoming
+            <span>events.</span>
+        </h2>
+
+        <p>
+            Find something exciting to do. From music festivals to
+            creative workshops, there is always something happening.
+        </p>
+
+    </div>
+
+
+    <div class="category-tabs" id="categories">
+
+        <button
+            class="category-tab active"
+            data-category="all"
+        >
+            All Events
+        </button>
+
+        <button
+            class="category-tab"
+            data-category="music"
+        >
+            🎵 Music
+        </button>
+
+        <button
+            class="category-tab"
+            data-category="workshop"
+        >
+            💡 Workshops
+        </button>
+
+        <button
+            class="category-tab"
+            data-category="sports"
+        >
+            ⚽ Sports
+        </button>
+
+        <button
+            class="category-tab"
+            data-category="comedy"
+        >
+            😂 Comedy
+        </button>
+
+        <button
+            class="category-tab"
+            data-category="business"
+        >
+            💼 Business
+        </button>
+
+    </div>
+
+
+    <div class="event-grid" id="eventGrid">
+
+
+        <article
+            class="event-card"
+            data-category="music"
+            data-location="hyderabad"
+            data-search="summer music fest music hyderabad concert"
+        >
+
+            <div class="event-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85"
+                    alt="Music festival"
+                >
+
+                <span class="event-category">
+                    MUSIC
+                </span>
+
+                <button class="favorite-button">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="event-content">
+
+                <div class="event-date-box">
+                    <strong>24</strong>
+                    <span>JUN</span>
+                </div>
+
+
+                <div class="event-info">
+
+                    <h3>
+                        Summer Music Fest
+                    </h3>
+
+                    <p>
+                        🎤 Live music • Multiple artists
+                    </p>
+
+                    <p>
+                        📍 Gachibowli, Hyderabad
+                    </p>
+
+                    <div class="event-bottom">
+
+                        <strong>
+                            ₹799
+                        </strong>
+
+                        <button
+                            class="details-button"
+                            data-event="Summer Music Fest"
+                        >
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="event-card"
+            data-category="workshop"
+            data-location="bangalore"
+            data-search="creative design workshop bangalore"
+        >
+
+            <div class="event-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=85"
+                    alt="Creative workshop"
+                >
+
+                <span class="event-category">
+                    WORKSHOP
+                </span>
+
+                <button class="favorite-button">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="event-content">
+
+                <div class="event-date-box">
+                    <strong>28</strong>
+                    <span>JUN</span>
+                </div>
+
+
+                <div class="event-info">
+
+                    <h3>
+                        Creative Design Workshop
+                    </h3>
+
+                    <p>
+                        🎨 Design • Creativity • Networking
+                    </p>
+
+                    <p>
+                        📍 Indiranagar, Bangalore
+                    </p>
+
+                    <div class="event-bottom">
+
+                        <strong>
+                            ₹499
+                        </strong>
+
+                        <button
+                            class="details-button"
+                            data-event="Creative Design Workshop"
+                        >
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="event-card"
+            data-category="sports"
+            data-location="mumbai"
+            data-search="city marathon sports mumbai running"
+        >
+
+            <div class="event-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=900&q=85"
+                    alt="Marathon event"
+                >
+
+                <span class="event-category">
+                    SPORTS
+                </span>
+
+                <button class="favorite-button">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="event-content">
+
+                <div class="event-date-box">
+                    <strong>05</strong>
+                    <span>JUL</span>
+                </div>
+
+
+                <div class="event-info">
+
+                    <h3>
+                        Mumbai City Marathon
+                    </h3>
+
+                    <p>
+                        🏃 Running • Fitness • Challenge
+                    </p>
+
+                    <p>
+                        📍 Marine Drive, Mumbai
+                    </p>
+
+                    <div class="event-bottom">
+
+                        <strong>
+                            ₹599
+                        </strong>
+
+                        <button
+                            class="details-button"
+                            data-event="Mumbai City Marathon"
+                        >
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="event-card"
+            data-category="comedy"
+            data-location="delhi"
+            data-search="comedy night standup delhi"
+        >
+
+            <div class="event-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=900&q=85"
+                    alt="Comedy show"
+                >
+
+                <span class="event-category">
+                    COMEDY
+                </span>
+
+                <button class="favorite-button">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="event-content">
+
+                <div class="event-date-box">
+                    <strong>12</strong>
+                    <span>JUL</span>
+                </div>
+
+
+                <div class="event-info">
+
+                    <h3>
+                        Laugh Out Loud Night
+                    </h3>
+
+                    <p>
+                        🎙️ Stand-up • Comedy • Entertainment
+                    </p>
+
+                    <p>
+                        📍 Connaught Place, Delhi
+                    </p>
+
+                    <div class="event-bottom">
+
+                        <strong>
+                            ₹399
+                        </strong>
+
+                        <button
+                            class="details-button"
+                            data-event="Laugh Out Loud Night"
+                        >
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="event-card"
+            data-category="business"
+            data-location="hyderabad"
+            data-search="startup business summit hyderabad"
+        >
+
+            <div class="event-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=85"
+                    alt="Business conference"
+                >
+
+                <span class="event-category">
+                    BUSINESS
+                </span>
+
+                <button class="favorite-button">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="event-content">
+
+                <div class="event-date-box">
+                    <strong>19</strong>
+                    <span>JUL</span>
+                </div>
+
+
+                <div class="event-info">
+
+                    <h3>
+                        Startup Growth Summit
+                    </h3>
+
+                    <p>
+                        🚀 Startups • Business • Networking
+                    </p>
+
+                    <p>
+                        📍 HITEC City, Hyderabad
+                    </p>
+
+                    <div class="event-bottom">
+
+                        <strong>
+                            ₹999
+                        </strong>
+
+                        <button
+                            class="details-button"
+                            data-event="Startup Growth Summit"
+                        >
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="event-card"
+            data-category="music"
+            data-location="bangalore"
+            data-search="indie music evening bangalore live music"
+        >
+
+            <div class="event-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85"
+                    alt="Live music evening"
+                >
+
+                <span class="event-category">
+                    MUSIC
+                </span>
+
+                <button class="favorite-button">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="event-content">
+
+                <div class="event-date-box">
+                    <strong>26</strong>
+                    <span>JUL</span>
+                </div>
+
+
+                <div class="event-info">
+
+                    <h3>
+                        Indie Music Evening
+                    </h3>
+
+                    <p>
+                        🎸 Indie artists • Live performance
+                    </p>
+
+                    <p>
+                        📍 Koramangala, Bangalore
+                    </p>
+
+                    <div class="event-bottom">
+
+                        <strong>
+                            ₹699
+                        </strong>
+
+                        <button
+                            class="details-button"
+                            data-event="Indie Music Evening"
+                        >
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div
+        class="no-events"
+        id="noEvents"
+    >
+        <span>🔎</span>
+
+        <h3>
+            No events found
+        </h3>
+
+        <p>
+            Try another search or category.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="event-highlight">
+
+    <div class="highlight-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=85"
+            alt="Concert crowd"
+        >
+
+    </div>
+
+
+    <div class="highlight-content">
+
+        <span class="eyebrow">
+            FEATURED EXPERIENCE
+        </span>
+
+        <h2>
+            Feel the music.
+            <span>Live.</span>
+        </h2>
+
+        <p>
+            Experience unforgettable performances from talented artists,
+            amazing sound and an electric crowd.
+        </p>
+
+
+        <div class="highlight-details">
+
+            <div>
+                <span>📅</span>
+                <strong>24 June</strong>
+            </div>
+
+            <div>
+                <span>📍</span>
+                <strong>Hyderabad</strong>
+            </div>
+
+            <div>
+                <span>⏰</span>
+                <strong>7:00 PM</strong>
+            </div>
+
+        </div>
+
+
+        <button
+            class="btn primary"
+            data-book="Summer Music Fest"
+            id="featuredBook"
+        >
+            Book Tickets
+            <span>→</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="section categories-section">
+
+    <div class="section-heading">
+
+        <span class="eyebrow">
+            FIND YOUR VIBE
+        </span>
+
+        <h2>
+            Explore by
+            <span>category.</span>
+        </h2>
+
+        <p>
+            Whatever you love, there is an event waiting for you.
+        </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <button
+            class="category-card"
+            data-category-link="music"
+        >
+            <span>🎵</span>
+            <strong>Music</strong>
+            <small>120+ Events</small>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category-link="workshop"
+        >
+            <span>💡</span>
+            <strong>Workshops</strong>
+            <small>80+ Events</small>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category-link="sports"
+        >
+            <span>⚽</span>
+            <strong>Sports</strong>
+            <small>70+ Events</small>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category-link="comedy"
+        >
+            <span>😂</span>
+            <strong>Comedy</strong>
+            <small>50+ Events</small>
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category-link="business"
+        >
+            <span>💼</span>
+            <strong>Business</strong>
+            <small>90+ Events</small>
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="about-section" id="about">
+
+    <div class="about-content">
+
+        <span class="eyebrow">
+            ABOUT EVENTIFY
+        </span>
+
+        <h2>
+            Your world of
+            <span>experiences.</span>
+        </h2>
+
+        <p>
+            Eventify makes discovering and booking events simple.
+            We connect people with memorable experiences while helping
+            event organizers reach the right audience.
+        </p>
+
+
+        <div class="about-points">
+
+            <div>
+                <span>✓</span>
+
+                <p>
+                    <strong>Easy discovery</strong><br>
+                    Find events based on your interests and location.
+                </p>
+            </div>
+
+
+            <div>
+                <span>✓</span>
+
+                <p>
+                    <strong>Simple booking</strong><br>
+                    Reserve your tickets quickly and securely.
+                </p>
+            </div>
+
+
+            <div>
+                <span>✓</span>
+
+                <p>
+                    <strong>Trusted experiences</strong><br>
+                    Discover carefully sele
